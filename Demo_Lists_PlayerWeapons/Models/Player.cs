@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Demo_ListsDictionaries
+namespace Demo_Lists_PlayerWeapons
 {
     /// <summary>
     /// Player class, inherites from Character class

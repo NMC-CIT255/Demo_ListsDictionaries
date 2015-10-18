@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Demo_ListsDictionaries
+namespace Demo_Lists_PlayerWeapons
 {
     // TODO T-01 add a GameIten class
     /// <summary>
