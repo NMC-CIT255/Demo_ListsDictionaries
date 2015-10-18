@@ -7,8 +7,8 @@
     <ProjectGuid>{1BBD9B02-5DBA-491D-8F39-25BC7B38B837}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Demo_ListsDictionaries</RootNamespace>
-    <AssemblyName>Demo_ListsDictionaries</AssemblyName>
+    <RootNamespace>Demo_Lists_PlayerWeapons</RootNamespace>
+    <AssemblyName>Demo_Lists_PlayerWeapons</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
