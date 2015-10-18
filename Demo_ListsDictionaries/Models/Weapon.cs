@@ -6,6 +6,10 @@ using System.Threading.Tasks;
 
 namespace Demo_ListsDictionaries
 {
+    // TODO T-02 add a Weapon class
+    /// <summary>
+    /// class for all game weapons
+    /// </summary>
     public class Weapon : GameItem
     {
         #region ENUMERABLES

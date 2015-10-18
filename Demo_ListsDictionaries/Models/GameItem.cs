@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Demo_ListsDictionaries
 {
+    // TODO T-01 add a GameIten class
     /// <summary>
     /// base class for all game items
     /// </summary>

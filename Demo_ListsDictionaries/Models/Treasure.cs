@@ -6,13 +6,15 @@ using System.Threading.Tasks;
 
 namespace Demo_ListsDictionaries
 {
+    // TODO W-01a - add a treasure class
     /// <summary>
     /// base class for all treasures
     /// </summary>
     public class Treasure
     {
         #region ENUMERABLES
-        // TODO Sprint 3 Mod 01b - add an enum of material types for treasures
+
+        // TODO W-01b - add an enum of material types for treasures
         public enum Material
         {
             Gold,
@@ -27,10 +29,10 @@ namespace Demo_ListsDictionaries
 
         #region FIELDS
 
-        // TODO Sprint 3 Mod 01c - add a dictionary to hold the values of each material
+        // TODO W-01c - add a dictionary to hold the values of each material
         private Dictionary<Material, int> materialValue = new Dictionary<Material, int>();
 
-        // TODO Sprint 3 Mod 04a - add a list of coins to hold the coin types
+        // TODO W-04a - add a list of coins to hold the coin types
         private List<Coin> _coinTypes;
 
         #endregion
@@ -48,7 +50,7 @@ namespace Demo_ListsDictionaries
 
         public Treasure()
         {
-            // TODO Sprint 3 Mod 01e - call the initialize material values method
+            // TODO W-01e - call the initialize material values method
             InitializeMaterialValues();
 
             _coinTypes = new List<Coin>();
@@ -59,7 +61,7 @@ namespace Demo_ListsDictionaries
 
         #region METHODS
 
-        // TODO Sprint 3 Mod 01d - add a method to initialze the material values
+        // TODO W-01d - add a method to initialze the material values
         public void InitializeMaterialValues()
         {
             materialValue[Material.Gold] = 10;
@@ -70,13 +72,13 @@ namespace Demo_ListsDictionaries
         }
 
 
-        // TODO Sprint 3 Mod 01f - add a method to return a material's value
+        // TODO W-01f - add a method to return a material's value
         public int Value(Material materialType)
         {
             return materialValue[materialType];
         }
 
-        // TODO Sprint 3 Mod 04b - add a method to calculate the vaule of each coin type
+        // TODO W-04b - add a method to calculate the vaule of each coin type
         public int CoinValue(Coin coin)
         {
             return coin.QuantityOfMaterial * materialValue[coin.TypeOfMaterial];
