@@ -18,19 +18,12 @@ namespace Demo_ListsDictionaries
 
         #region FIELDS
 
-        private List<CoinGroup> _coins; // add a field/property to hold the player's coins
         private List<Weapon> _weapons; // add a field/property to hold the player's weapons      
 
         #endregion
 
         #region PROPERTIES
         
-        public List<CoinGroup> Coins
-        {
-            get { return _coins; }
-            set { _coins = value; }
-        }
-
         public List<Weapon> Weapons
         {
             get { return _weapons; }
@@ -49,8 +42,6 @@ namespace Demo_ListsDictionaries
             string name)
             : base(name)
         {
-
-            _coins = new List<CoinGroup>();
 
             _weapons = new List<Weapon>();
         }
