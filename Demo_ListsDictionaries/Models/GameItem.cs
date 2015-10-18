@@ -6,17 +6,11 @@ using System.Threading.Tasks;
 
 namespace Demo_ListsDictionaries
 {
-    public class Item
+    // TODO Sprint 3 Mod 20 - add an GameItem base class
+    public class GameItem
     {
         #region ENUMERABLES
-
-        public enum Category
-        {
-            Coin,
-            Key,
-            Weapon,
-            Tool
-        }
+        
 
         #endregion
 
@@ -46,7 +40,16 @@ namespace Demo_ListsDictionaries
 
         #region CONSTRUCTORS
 
+        public GameItem()
+        {
 
+        }
+
+        public GameItem(string name, string description)
+        {
+            _name = name;
+            _description = description;
+        }
 
         #endregion
 
