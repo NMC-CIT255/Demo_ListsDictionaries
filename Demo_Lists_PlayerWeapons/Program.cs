@@ -15,8 +15,6 @@ namespace Demo_Lists_PlayerWeapons
 
             DemoWeaponManagement(myPlayer);
 
-            DemoTreasureManagement(myPlayer);
-
         }
 
         // TODO T-03 add a method to demonstrate weapons list management
@@ -61,10 +59,6 @@ namespace Demo_Lists_PlayerWeapons
             Console.ReadLine();
         }
 
-        public static void DemoTreasureManagement(Player myPlayer)
-        {
-
-        }
 
         // TODO T-04a add a method to initialize the player's weapons list
         /// <summary>
