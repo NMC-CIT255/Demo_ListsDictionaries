@@ -6,7 +6,6 @@ using System.Threading.Tasks;
 
 namespace Demo_ListsDictionaries
 {
-    //TODO Sprint 3 Mod 03a - add a Coin class
     /// <summary>
     /// class to create new coins
     /// </summary>

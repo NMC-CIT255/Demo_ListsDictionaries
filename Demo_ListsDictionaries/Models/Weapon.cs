@@ -6,7 +6,6 @@ using System.Threading.Tasks;
 
 namespace Demo_ListsDictionaries
 {
-    // TODO Sprint 3 Mod 20 - add an Weapon class derived from the GameItem class
     public class Weapon : GameItem
     {
         #region ENUMERABLES
@@ -14,7 +13,8 @@ namespace Demo_ListsDictionaries
         public enum WeaponType
         {
             knife,
-            gun
+            gun,
+            laser
         }
 
         #endregion

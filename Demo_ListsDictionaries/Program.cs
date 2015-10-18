@@ -15,11 +15,33 @@ namespace Demo_ListsDictionaries
             InitializePlayerWeapons(myPlayer);
             DisplayPlayersWeapons(myPlayer);
 
+            // create and add a new laser weapon
+            Console.WriteLine("We will now add a new weapon.");
+            Weapon laser = new Weapon
+                {
+                    Type = Weapon.WeaponType.laser,
+                    Name = "Laser L04",
+                    Description = "Handheld laser for malay type of fighting"
+                };
+            AddWeaponToPlayer(myPlayer, laser);
+            Console.ReadLine();
+
+            DisplayPlayersWeapons(myPlayer);
+
+            // remove a weapon
+            Console.WriteLine("We will now remove a weapon.");
+            RemoveWeaponFromPlayer(myPlayer, "Bowie Knife");
+            Console.ReadLine();
+
+            DisplayPlayersWeapons(myPlayer);
 
             Console.ReadLine();
 
         }
-
+        /// <summary>
+        /// add weapons to the players list of weapons
+        /// </summary>
+        /// <param name="myPlayer">Player Object</param>
         public static void InitializePlayerWeapons(Player myPlayer)
         {
             myPlayer.Weapons.Add(
@@ -39,6 +61,10 @@ namespace Demo_ListsDictionaries
                 });
         }
 
+        /// <summary>
+        /// display all of the player's weapons in the player's list of weapons
+        /// </summary>
+        /// <param name="myPlayer">Player Object</param>
         public static void DisplayPlayersWeapons(Player myPlayer)
         {
             Console.Clear();
@@ -56,6 +82,45 @@ namespace Demo_ListsDictionaries
                 Console.WriteLine("");
             }
 
+            Console.ReadLine();
+        }
+
+        /// <summary>
+        /// add a weapon the the player's weapon list
+        /// </summary>
+        /// <param name="myPlayer"></param>
+        /// <param name="weapon"></param>
+        public static void AddWeaponToPlayer(Player myPlayer, Weapon weapon)
+        {
+            myPlayer.Weapons.Add(weapon);
+        }
+
+
+        /// <summary>
+        /// remove a weapon from the player's weapon list
+        /// </summary>
+        /// <param name="myPlayer">Player Object</param>
+        /// <param name="weaponName">weapon to remove</param>
+        public static void RemoveWeaponFromPlayer(Player myPlayer, string weaponName)
+        {
+            // set default value to -1 to indicate that the weapon was not found in the list
+            int weaponIndex = -1;
+
+            // cycle through the weapon list until the weapon name matches and get the index of the weapon
+            foreach (var weapon in myPlayer.Weapons)
+            {
+                if (weapon.Name == weaponName)
+                {
+                    weaponIndex = myPlayer.Weapons.IndexOf(weapon);
+                }
+            }
+
+            // use lambda operator
+            // weaponIndex = myPlayer.Weapons.FindIndex(c => c.Name == weaponName);
+
+            Console.WriteLine("Remove the weapon with indesx = " + weaponIndex);
+
+            myPlayer.Weapons.RemoveAt(weaponIndex);
         }
     }
 }

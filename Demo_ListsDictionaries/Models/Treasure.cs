@@ -6,7 +6,6 @@ using System.Threading.Tasks;
 
 namespace Demo_ListsDictionaries
 {
-    // TODO Sprint 3 Mod 01a - add a treasure class
     /// <summary>
     /// base class for all treasures
     /// </summary>
