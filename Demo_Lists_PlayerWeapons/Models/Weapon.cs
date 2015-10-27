@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Demo_Lists_PlayerWeapons
 {
-    // TODO T-02 add a Weapon class
+    // TODO 02a add a Weapon class
     /// <summary>
     /// class for all game weapons
     /// </summary>
@@ -22,7 +22,6 @@ namespace Demo_Lists_PlayerWeapons
         }
 
         #endregion
-
 
         #region FIELDS
 

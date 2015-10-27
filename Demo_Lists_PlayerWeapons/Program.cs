@@ -10,27 +10,28 @@ namespace Demo_Lists_PlayerWeapons
     {
         static void Main(string[] args)
         {
+            // TODO 00a instantiate a player
             Player myPlayer = new Player("Bonzo");
 
-
+            // TODO 03b call the method to demonstrate weapons list management
             DemoWeaponManagement(myPlayer);
 
         }
 
-        // TODO T-03 add a method to demonstrate weapons list management
+        // TODO 03a add a method to demonstrate weapons list management
         /// <summary>
         /// demonstrate listing, adding, and removing a weapon from the player's weapon list
         /// </summary>
-        /// <param name="myPlayer">Player Opject</param>
+        /// <param name="myPlayer">Player Object</param>
         public static void DemoWeaponManagement(Player myPlayer)
         {
-            // TODO T-04b call the method to initialize the player's weapons list
+            // TODO 04b call the method to initialize the player's weapons list
             InitializePlayerWeapons(myPlayer);
 
-            // TODO T-05b call the method to display the player's weapons list
+            // TODO 05b call the method to display the player's weapons list
             DisplayPlayersWeapons(myPlayer);
 
-            // TODO T-06b creat a new weapone and add it to the player's weapons list
+            // TODO 06b create a new weapon and add it to the player's weapons list
             // create and add a new laser weapon
             Console.WriteLine("We will now add a new weapon.");
             Console.WriteLine("Press the Enter key to continue.");
@@ -38,21 +39,21 @@ namespace Demo_Lists_PlayerWeapons
             {
                 Type = Weapon.WeaponType.laser,
                 Name = "Laser L04",
-                Description = "Handheld laser for malay type of fighting"
+                Description = "Hand-held laser for melee type of fighting"
             };
             AddWeaponToPlayer(myPlayer, laser);
             Console.ReadLine();
 
-            // TODO T-06c display the player's weapons list
+            // TODO 06c display the player's weapons list
             DisplayPlayersWeapons(myPlayer);
 
-            // TODO T-07b choose and remove a weapon to the player's weapons list
+            // TODO 07b choose and remove a weapon to the player's weapons list
             // remove a weapon
             Console.WriteLine("We will now remove a weapon.");
-            RemoveWeaponFromPlayer(myPlayer, "Bowie Knife");
+            RemoveWeaponFromPlayer(myPlayer, "Laser L04");
             Console.ReadLine();
 
-            // TODO T-07c display the player's weapons list
+            // TODO 07c display the player's weapons list
             DisplayPlayersWeapons(myPlayer);
 
             Console.WriteLine("Press the Enter key to continue.");
@@ -60,7 +61,7 @@ namespace Demo_Lists_PlayerWeapons
         }
 
 
-        // TODO T-04a add a method to initialize the player's weapons list
+        // TODO 04a add a method to initialize the player's weapons list
         /// <summary>
         /// add weapons to the players list of weapons
         /// </summary>
@@ -84,7 +85,7 @@ namespace Demo_Lists_PlayerWeapons
                 });
         }
 
-        // TODO T-05a add a method to display the player's weapons list
+        // TODO 05a add a method to display the player's weapons list
         /// <summary>
         /// display all of the player's weapons in the player's list of weapons
         /// </summary>
@@ -109,9 +110,9 @@ namespace Demo_Lists_PlayerWeapons
             Console.ReadLine();
         }
 
-        // TODO T-06a add a method to add a weapon to the player's weapons list
+        // TODO 06a add a method to add a weapon to the player's weapons list
         /// <summary>
-        /// add a weapon the the player's weapon list
+        /// add a weapon the player's weapon list
         /// </summary>
         /// <param name="myPlayer"></param>
         /// <param name="weapon"></param>
@@ -120,7 +121,7 @@ namespace Demo_Lists_PlayerWeapons
             myPlayer.Weapons.Add(weapon);
         }
 
-        // TODO T-07a add a method to remove a weapon to the player's weapons list
+        // TODO 07a add a method to remove a weapon to the player's weapons list
         /// <summary>
         /// remove a weapon from the player's weapon list
         /// </summary>
@@ -132,18 +133,18 @@ namespace Demo_Lists_PlayerWeapons
             int weaponIndex = -1;
 
             // cycle through the weapon list until the weapon name matches and get the index of the weapon
-            foreach (var weapon in myPlayer.Weapons)
-            {
-                if (weapon.Name == weaponName)
-                {
-                    weaponIndex = myPlayer.Weapons.IndexOf(weapon);
-                }
-            }
+            //foreach (var weapon in myPlayer.Weapons)
+            //{
+            //    if (weapon.Name == weaponName)
+            //    {
+            //        weaponIndex = myPlayer.Weapons.IndexOf(weapon);
+            //    }
+            //}
 
             // use lambda operator
-            // weaponIndex = myPlayer.Weapons.FindIndex(c => c.Name == weaponName);
+            weaponIndex = myPlayer.Weapons.FindIndex(c => c.Name == weaponName);
 
-            Console.WriteLine("Remove the weapon with indesx = " + weaponIndex);
+            Console.WriteLine("Remove the weapon with index = " + weaponIndex);
             Console.WriteLine("Press the Enter key to continue.");
 
             myPlayer.Weapons.RemoveAt(weaponIndex);

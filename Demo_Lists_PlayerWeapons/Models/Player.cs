@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace Demo_Lists_PlayerWeapons
 {
     /// <summary>
-    /// Player class, inherites from Character class
+    /// Player class, inherits from Character class
     /// </summary>
     public class Player : Character
     {
@@ -18,7 +18,8 @@ namespace Demo_Lists_PlayerWeapons
 
         #region FIELDS
 
-        private List<Weapon> _weapons; // add a field/property to hold the player's weapons      
+        // TODO 02b add a field/property of list type to hold the player's weapons
+        private List<Weapon> _weapons;     
 
         #endregion
 
@@ -35,7 +36,7 @@ namespace Demo_Lists_PlayerWeapons
         #region CONSTRUCTORS
 
         /// <summary>
-        /// instantiate a player and set intial properties
+        /// instantiate a player and set initial properties
         /// </summary>
         /// <param name="name">player name</param>
         public Player(

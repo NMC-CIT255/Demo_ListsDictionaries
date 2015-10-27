@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Demo_Lists_PlayerWeapons
 {
-    // TODO T-01 add a GameIten class
+    // TODO 01 add a GameIten class
     /// <summary>
     /// base class for all game items
     /// </summary>
